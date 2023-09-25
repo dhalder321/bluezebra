@@ -36,7 +36,13 @@ export default function Main(){
                     }
                 }>
                 <option value="defaultSelection" key="0">---Select a topic---</option>
-                { allTopics.map( topic => <option value={topic.topic_Id} key={topic.topic_Id} >{topic.topic_text}</option>)}
+                { allTopics.filter(t => Object.is(t.visibility, undefined) 
+                                        || Object.is(t.visibility, null) 
+                                        || t.visibility == true).sort((t1, t2) =>{
+                    if(t1.topic_type < t2.topic_type) return -1;
+                    else if(t1.topic_type > t2.topic_type) return 1;
+                    else return 0;
+                }).map( topic => <option value={topic.topic_Id} key={topic.topic_Id} >{topic.topic_text}</option>)}
             </select>
             <button 
                 type="submit"
