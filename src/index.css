@@ -1,0 +1,188 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400&display=swap');
+
+
+body{
+    margin: 0;
+    font-family: Titillium Web, sans-serif;
+    color: #4682A9;
+}
+
+
+
+
+.topBanner {
+    display: flex;
+    align-items: center;
+    background-color: #F6F4EB;
+    height: 40px;
+    padding: 30px 25px;
+    font-weight: 400;
+    font-size: 20px;
+    justify-content: space-between;
+    
+}
+
+.companyName{
+    color: #4682A9;
+    font-family: Titillium Web, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+.topBanner > h3, .topBanner > h4, .topBanner > list > ul, .topBanner > list > ul > a{
+    
+    margin: 0;
+    color: #4682A9;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+}
+
+
+.topBanner > list {
+ 
+    list-style: none;
+    display: flex;
+}
+
+.topBanner > list > ul > a{
+
+    font-style: normal;
+    
+}
+.footer{
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: #F6F4EB;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer > h4{
+
+    color:#4682A9;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-weight: 400;
+    font-size: 20px;
+
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: Titillium Web, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+}
+
+.mainContainer > h3 {
+    font-family: Titillium Web, sans-serif;
+    font-size: 20px;
+}
+
+.selectOption{
+    position: relative;
+    width: 800px;
+    height: 40px;
+    font-family: Titillium Web, sans-serif;
+    font-size: 20px;
+}
+
+.selectionBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    width: 100%;
+    background-color: #91C8E4;
+    margin-top: 40px;
+}
+
+.selectionDropdown{
+    height: 30px;
+    width: 220px;
+}
+
+.material--box{
+    display: flex;
+    flex-direction:column;
+    align-items:first baseline;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.material--item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 70px;
+    background-color: #F6F4EB;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 7px 15px 12px 15px;
+    margin-bottom: 15px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.material--item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.materialHeading{
+
+    font-size: 19px;
+    font-weight: 600;
+    height: 25px;
+    width: 80%;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+}
+
+.material--info{
+
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+.submitButton{
+
+    display: none;
+}
+
+.iconContainer{
+    display: flex;
+    width: 10%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.disabledIcon{
+    height: 25px;
+    width: 25px;  
+    opacity: 0.4;  
+}
+
+.downloadIcon{
+    height: 25px;
+    width: 25px;
+}
+.logo{
+
+    display: none;
+    height: 20px;
+    width: 20px;
+}
+
