@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import FormModal from "./FormModal";
+import UpdateTrafficData from "./UpdateTrafficData";
 
 import downloadIcon from "../assets/images/download-icon.png"
 import customize from "../assets/images/customize.png"
@@ -25,6 +26,17 @@ export default function Material(selectedTopic) {
 
     const downloadArtifact = (url, fileName) => {
 
+        //update traffic's interest
+        UpdateTrafficData({
+            trafficType: "Downloaded_Material",
+            ipAddress: "",
+            latitude: "",
+            longitude: "",
+            accuracy: "",
+            error: "",
+            Message: "Downloaded material : " + fileName + " at URL: " + url,
+            browserDetails: ""
+        });
         fetch(url)
         .then(response => {
             response.blob().then(blob => {
@@ -72,7 +84,7 @@ export default function Material(selectedTopic) {
     
     materialContent = sortedMaterials.length > 0? 
                         sortedMaterials.map(material => 
-                            <section className="material--item" key={material.material_id}>
+                            <div className="material--item" key={material.material_id}>
                                 <div className="materialHeading">{material.material_name}</div>
                                 <div className="iconContainer">
                                 <img src={requestModification} className="disabledIcon"></img> 
@@ -124,7 +136,7 @@ export default function Material(selectedTopic) {
                                                     : material.price} 
                                 </span> 
                                 
-                            </section>    
+                            </div>    
     ) 
     : materialContent
 

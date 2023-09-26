@@ -1,6 +1,8 @@
 import React from "react";
 //import Topics from "./Topics";
 import Material from "./Material";
+import UpdateTrafficData from "./UpdateTrafficData";
+
 
 
 export default function Main(){
@@ -58,6 +60,17 @@ export default function Main(){
                     {
                         e && e.preventDefault();
                         const {value} = e.target
+                        //update traffic's interests
+                        UpdateTrafficData({
+                            trafficType: "Topic_Interest",
+                            ipAddress: "",
+                            latitude: "",
+                            longitude: "",
+                            accuracy: "",
+                            error: "",
+                            Message: "Selected topic : " + e.target.options[e.target.selectedIndex].text,
+                            browserDetails: ""
+                        });
                         setSelectedTopicId(value);
                         //alert("Topic id:" + value)
                     }
