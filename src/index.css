@@ -52,6 +52,13 @@ body{
     font-style: normal;
     
 }
+
+.navbarLink{
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+
 .footer{
 
     display: flex;
@@ -90,6 +97,26 @@ body{
     font-size: 20px;
 }
 
+.noteContainer{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 1.5rem;
+}
+.noteText{
+    word-wrap: normal;
+    width:90%;
+    text-align:justify;
+    background-color: #F6F4EB;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: black;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
 .selectOption{
     position: relative;
     width: 800px;
@@ -109,9 +136,16 @@ body{
     margin-top: 40px;
 }
 
+.submitButtonShow{
+    height: 2rem;
+    width: 8rem;
+}
+
+
+
 .selectionDropdown{
-    height: 30px;
-    width: 220px;
+    height: 2rem;
+    width: 12rem;
 }
 
 .material--box{
@@ -174,11 +208,20 @@ body{
     width: 25px;  
     opacity: 0.4;  
 }
-
 .downloadIcon{
     height: 25px;
     width: 25px;
+    fill: 1;
 }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; } /* Default */
+.material-icons.md-25 { font-size: 25px; fill: 1; color: #4682A9} 
+.material-icons.md-25-disabled { font-size: 25px; fill: 1; opacity: 0.4;  } 
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+
 .logo{
 
     display: none;
@@ -186,3 +229,6 @@ body{
     width: 20px;
 }
 
+.noDisplayBox{
+    display: none;
+}
