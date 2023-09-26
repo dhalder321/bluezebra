@@ -51,8 +51,23 @@ export default function ZNavbar()
         <MDBCollapse navbar >
           <MDBNavbarNav right fullWidth={false} className='mb-2 mb-lg-0'>
           <MDBNavbarItem>
-            <MDBNavbarLink active aria-current='page' href='#' onClick={handleShow}>
-              Suggestions
+            <MDBNavbarLink active aria-current='page' href='#' className="navbarLink" onClick={handleShow}>
+              Donate contents
+            </MDBNavbarLink>
+          </MDBNavbarItem>
+          <MDBNavbarItem>
+            <MDBNavbarLink active aria-current='page' href='#' className="navbarLink" onClick={handleShow}>
+              Sell contents
+            </MDBNavbarLink>
+          </MDBNavbarItem>
+          <MDBNavbarItem>
+            <MDBNavbarLink active aria-current='page' href='#' className="navbarLink" onClick={handleShow}>
+              Request change
+            </MDBNavbarLink>
+          </MDBNavbarItem>
+          <MDBNavbarItem>
+            <MDBNavbarLink active aria-current='page' href='#' className="navbarLink" onClick={handleShow}>
+              Suggestions/Comments
             </MDBNavbarLink>
           </MDBNavbarItem>
           </MDBNavbarNav>

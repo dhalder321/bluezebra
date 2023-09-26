@@ -44,14 +44,32 @@ export default function Material(selectedTopic) {
         fetch("https://iz4tu2qmv5.execute-api.us-east-2.amazonaws.com/Test/materials?TopicId=" + selectedTopic.selectedTopicId)
             .then(response => response.json())
             .then(data => setAllMaterials(data.Materials));
-            //alert("useEffectMaterials-No::" + Math.random(1000));
         
         },[selectedTopic.selectedTopicId]);
 
     let materialContent;
-    const sortedMaterials = allMaterials.sort(
-        (m1, m2) => (m1.price < m2.price)? -1: (m1.price > m2.price)? 1 : 0
+
+    
+    //filter the materials
+    var filteredMaterials = [];
+    // filteredMaterials = selectedTopic && selectedTopic.selectedLanguage != "-1" 
+    //                                 && allMaterials.filter(m => m.artifacts.includes
+    //                                     (a => a.locale_code.toLowerCase() === selectedTopic.selectedLanguage.toLowerCase()));
+    //filter the artifacts                                        
+    // filteredMaterials = filteredMaterials && filteredMaterials.length > 0 
+    //             && filteredMaterials.forEach(m =>{
+    //             m.artifacts = m.artifacts.filter(a => a.locale_code.toLowerCase() === selectedTopic.selectedLanguage.toLowerCase())
+    // });
+    //filter the 
+    // allMaterials = selectedTopic && selectedTopic.selectedAge != "-1" 
+    //                                 && allMaterials.filter(m => m.locale_code.toLowerCase() === selectedTopic.selectedLanguage.toLowerCase());                                    
+    
+    //alert(JSON.stringify(allMaterials));
+    const sortedMaterials = allMaterials && allMaterials.length > 0 
+            && allMaterials.sort(
+            (m1, m2) => (m1.price < m2.price)? -1: (m1.price > m2.price)? 1 : 0
     );
+    
     materialContent = sortedMaterials.length > 0? 
                         sortedMaterials.map(material => 
                             <section className="material--item" key={material.material_id}>
@@ -61,7 +79,7 @@ export default function Material(selectedTopic) {
                                 <img src={addNew} className="disabledIcon"></img> 
                                 <img src={customize} className="disabledIcon"></img> 
                                 <a href= "">
-                                <img src={downloadIcon} className="downloadIcon" onClick={async (e)=>{
+                                <img src={downloadIcon} className="material-icons md-25" onClick={async (e)=>{
 
                                         e && e.preventDefault();
                                         let name, path, enusArtifact;
@@ -113,7 +131,7 @@ export default function Material(selectedTopic) {
     return (
         <>
             <div>
-                { materialContent ? materialContent :  <span>No entries found</span>}
+                { materialContent ? materialContent :  <span>Zebra team is working on adding these materials.</span>}
             </div>
             {showModal.current && <FormModal showModal={true} key={formModalKeyMaterials.current}
             text="Requested material is not accessible due to high number of requests. Zebra team is continually working on making these materials available to you. Please share your requirements and feedback to improve our service."></FormModal>}

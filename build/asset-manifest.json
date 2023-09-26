@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.71659bd4.css",
+    "main.js": "/static/js/main.74d56f17.js",
+    "static/media/zebra-logo.png": "/static/media/zebra-logo.371f3f8bae08b12a07c5.png",
+    "index.html": "/index.html",
+    "main.71659bd4.css.map": "/static/css/main.71659bd4.css.map",
+    "main.74d56f17.js.map": "/static/js/main.74d56f17.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71659bd4.css",
+    "static/js/main.74d56f17.js"
+  ]
+}
